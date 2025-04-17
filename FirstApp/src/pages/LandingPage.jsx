@@ -2,11 +2,17 @@ import React from "react";
 import NavBar from '../layouts/NavBar.jsx';
 import HandGesureBg from '../assets/HandGesture.png';
 import StreamPlayer from "../components/StreamPlayer.jsx";
+import { motion } from "framer-motion";
 
 function LandingPage() {
 
     return(
-       <div className="w-full h-screen">
+       <motion.div 
+        initial = {{opacity: 0, x: 20}}
+        animate = {{opacity: 1, x: 0 }}
+        exit={{opacity: 0, x: -20 }}
+        transition={{duration: 1}}
+       className="w-full h-screen">
         <div className="border-black/80">
             <NavBar/>
             <div className="flex flex-row">
@@ -19,7 +25,7 @@ function LandingPage() {
                 </div>
             </div>
         </div>
-       </div>
+       </motion.div>
     );
 };
 
