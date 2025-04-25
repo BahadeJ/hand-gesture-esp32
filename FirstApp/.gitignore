@@ -24,3 +24,6 @@ dist-ssr
 *.sw?
 
 .env
+FastAPI/esp32-g6-firebase-adminsdk-fbsvc-5355c1e89f.json
+env
+firebase-config.js
